@@ -117,34 +117,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-      {/* <div className="main-two">
-        
-      </div>
-
-      <div className="main-three">
-        
-      </div> */}
-      {/*
-      Product
-
-      Overview
-      Pricing
-      Marketplace
-      Features
-      Integrations
-
-      Company
-
-      About
-      Team
-      Blog
-      Careers
-
-      Connect
-
-      Contact
-      Newsletter
-      LinkedIn */}
     </main>
   )
 }
