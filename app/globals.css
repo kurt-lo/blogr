@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html{
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .nav {
     /* background-image: url('../public/bg-pattern-intro-mobile.svg');
     background-size: cover;
@@ -25,15 +31,34 @@
     border-color: hsla(240, 3%, 79%, 0.575);
 }
 
+.nav-hero{
+    background-image: url("../public/bg-pattern-intro-mobile.svg"), linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-bottom-left-radius: 100px;
+}
+
+/* FOR MOBILE SCREENS */
 @media (max-width: 640px) {
     .dropdown {
         position: absolute;
-        top: 10%;
+        top: 7rem;
         left: 5%;
         /* width: 90%; */
         height: max-content;
+        background-color: hsl(0, 0%, 100%);
     }
 }
 
+/* FOR LARGER SCREENS */
+@media (min-width: 641px) {
+    .btn-custom {
+        background: white;
+    }
 
-/* aayusin ko na yung kapag big screen desktop design sa navbar */
+    .nav-hero{
+        background-image: url("../public/bg-pattern-intro-desktop.svg"), linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    }
+}

@@ -22,7 +22,7 @@ const Dropdown = ({ title, links }: DropdownProps) => {
 
     return (
         <div className='py-3'>
-            <div className='flex items-center justify-center gap-2 font-ubuntu font-ubuntu-bold'>
+            <div className='flex items-center justify-center gap-2'>
                 <button
                     className=""
                     onClick={toggleDropdown}
@@ -44,7 +44,7 @@ const Dropdown = ({ title, links }: DropdownProps) => {
             {dropDownOpen && (
                 <div className='links flex flex-col mx-7 rounded py-3 animate-flip-down animate-once animate-ease-out'>
                     {links.map((link) => (
-                        <Link key={link.href} href={link.href} className='links-text py-3 font-ubuntu font-ubuntu-bold'>
+                        <Link key={link.href} href={link.href} className='links-text py-3 font-ubuntu-bold'>
                             {link.label}
                         </Link>
                     ))}

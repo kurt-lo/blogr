@@ -6,51 +6,52 @@ export default function Home() {
 
   const [imageWidth, setImageWidth] = useState(406);
   const [imageHeight, setImageHeight] = useState(331);
-  const [imageSrc, setImageSrc] = useState('/illustration-editor-mobile.svg');
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 641) {
-        setImageSrc('/illustration-editor-desktop.svg');
-        setImageWidth(974);
-        setImageHeight(786);
+    function handleResize() {
+      // Check the window width
+      const windowWidth = window.innerWidth;
+
+      // Set the image width and height based on screen size
+      if (windowWidth >= 641) {
+        setImageWidth(952);
+        setImageHeight(882);
       } else {
-        setImageSrc('/illustration-editor-mobile.svg');
-        setImageWidth(406);
-        setImageHeight(331);
+        setImageWidth(406); // Default width for smaller screens
+        setImageHeight(331); // Default height for smaller screens
       }
-    };
+    }
 
-    // Initially set the image source based on the window width
-    handleResize();
-
-    // Add event listener for window resize
+    // Add an event listener to handle window resize
     window.addEventListener('resize', handleResize);
 
-    // Cleanup the event listener on component unmount
+    // Call handleResize on initial render
+    handleResize();
+
+    // Remove the event listener when the component unmounts
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   return (
-    <main className="mt-[6rem] w-[90%] mx-auto sm:w-[100%]">
+    <main className="mt-[6rem]">
       <section className="main-one">
         <div className='title-container'>
-          <h1 className=' text-[2rem] font-ubuntu-bold text-center'>Designed for the future</h1>
+          <h1 className='text-center text-[2rem] font-ubuntu-bold'>Designed for the future</h1>
         </div>
-        <div className='body-container flex flex-col sm:flex-row-reverse sm:pl-[5rem] lg:pl-[10rem] pt-[3rem] justify-center items-center'>
-          <div className='image-container sm:flex-1 overflow-hidden'>
+        <div className='body-container flex flex-col sm:flex-row-reverse '>
+          <div className='image-container'>
             <Image
-              src={imageSrc}
-              alt="illustration editor"
+              src="/illustration-editor-desktop.svg"
+              alt="illustration editor desktop"
               width={imageWidth}
               height={imageHeight}
-              className='illustrator sm:max-w-[140%]'
+              className='illustrator'
             />
           </div>
 
-          <div className='text-container sm:flex-1 pt-[3rem] text-center sm:text-left'>
+          <div className='text-container'>
             <h2 className='text-[1.5rem] font-ubuntu-bold'>Introducing an extensible editor</h2>
             <p className='text-[1.1rem] pt-[.8rem]'>
               Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
@@ -58,8 +59,8 @@ export default function Home() {
               videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
               change the looks of a blog.
             </p>
-            <h2 className='text-[1.5rem] font-ubuntu-bold pt-[1rem]'>Robust content management</h2>
-            <p className='text-[1.1rem] pt-[.8rem]'>
+            <h2>Robust content management</h2>
+            <p>
               Flexible content management enables users to easily move through posts. Increase the usability of your blog
               by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
             </p>
