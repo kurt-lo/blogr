@@ -60,7 +60,7 @@ const Navbar = () => {
                         </button>
                     </div>
                     <div className='pt-3 sm:pt-0 pb-5 sm:pb-0'>
-                        <button className='btn-custom bg-intro-cta-mobile py-3 px-7 rounded-[50px] text-white sm:text-light-red'>
+                        <button className='btn-custom bg-intro-cta-mobile py-3 px-7 rounded-[50px] text-white sm:text-light-red hover:sm:text-white'>
                             Sign Up
                         </button>
                     </div>

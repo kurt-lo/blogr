@@ -20,7 +20,7 @@ const Footer = () => {
             <h2 className='text-white text-[1.2rem] pt-[2rem] sm:pt-0 pb-[2rem]'>{title.title}</h2>
             <ul>
               {title.links.map((link, linkIndex) => (
-                <li key={linkIndex} className=' text-grayish-blue pb-[.5rem] sm:pb-[1rem]'>
+                <li key={linkIndex} className=' text-grayish-blue pb-[.5rem] sm:pb-[1rem] hover:underline'>
                   <Link href={link.href}>
                     {link.label}
                   </Link>

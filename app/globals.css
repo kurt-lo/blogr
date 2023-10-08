@@ -4,11 +4,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-html{
+html {
     font-family: 'Ubuntu', sans-serif;
 }
 
-.arrow, .menu {
+.arrow,
+.menu {
     transition: transform 0.3s ease;
 }
 
@@ -16,7 +17,7 @@ html{
     background-color: hsla(240, 3%, 79%, 0.24);
 }
 
-.links-text{
+.links-text {
     color: hsl(240, 1%, 38%);
 }
 
@@ -24,7 +25,7 @@ html{
     border-color: hsla(240, 3%, 79%, 0.575);
 }
 
-.nav-hero{
+.nav-hero {
     background-image: url("../public/bg-pattern-intro-mobile.svg"), linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     background-repeat: no-repeat;
     background-position: center;
@@ -32,7 +33,8 @@ html{
 }
 
 .main-two {
-    background-image: url("../public/bg-pattern-circles.svg"), linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 17%, 21%));;
+    background-image: url("../public/bg-pattern-circles.svg"), linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 17%, 21%));
+    ;
     background-size: fill;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -58,11 +60,16 @@ html{
         background: white;
     }
 
-    .nav-hero{
+    .nav-hero {
         background-image: url("../public/bg-pattern-intro-desktop.svg"), linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     }
 
     .main-two {
         background-position: left bottom;
     }
+
+    .btn-custom:hover, .btn-start:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
 }

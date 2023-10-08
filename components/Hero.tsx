@@ -13,11 +13,11 @@ const Hero = () => {
             </div>
 
             <div className='flex justify-around sm:justify-center sm:gap-[1.5rem] items-center text-center pt-[2rem] pb-[10rem]'>
-                <button className='bg-white rounded-[50px] py-3 px-6 text-light-red font-ubuntu-bold'>
+                <button className='btn-start bg-white rounded-[50px] py-3 px-6 text-light-red font-ubuntu-bold sm:hover:text-white'>
                     Start for Free
                 </button>
-                <button className='border-solid border-2 border-white rounded-[50px] py-3 px-6 text-white font-ubuntu-bold'>
-                    Learn More
+                <button className='border-solid border-2 border-white rounded-[50px] py-3 px-6 text-white font-ubuntu-bold sm:hover:bg-white sm:hover:text-light-red'>
+                    <span>Learn More</span>
                 </button>
             </div>
         </div>
