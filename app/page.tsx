@@ -7,15 +7,18 @@ export default function Home() {
   const [imageWidth, setImageWidth] = useState(406);
   const [imageHeight, setImageHeight] = useState(331);
   const [imageSrc, setImageSrc] = useState('/illustration-editor-mobile.svg');
+  const [imageSrcLaptop, setImageSrcLaptop] = useState('/illustration-laptop-mobile.svg');
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 641) {
         setImageSrc('/illustration-editor-desktop.svg');
+        setImageSrcLaptop('/illustration-laptop-desktop.svg');
         setImageWidth(974);
         setImageHeight(786);
       } else {
         setImageSrc('/illustration-editor-mobile.svg');
+        setImageSrcLaptop('/illustration-laptop-mobile.svg');
         setImageWidth(406);
         setImageHeight(331);
       }
@@ -38,13 +41,13 @@ export default function Home() {
       {/* SECTION ONE */}
       <section className="main-one sm:px-0 px-[2rem]">
         <div className='title-container'>
-          <h1 className=' text-[2rem] font-ubuntu-bold text-center text-very-dark-blue'>Designed for the future</h1>
+          <h1 className='text-[2rem] font-ubuntu-bold text-center text-very-dark-blue'>Designed for the future</h1>
         </div>
         <div className='body-container flex flex-col sm:flex-row-reverse sm:pl-[5rem] lg:pl-[10rem] pt-[3rem] justify-center items-center'>
           <div className='image-container sm:flex-1 overflow-hidden'>
             <Image
               src={imageSrc}
-              alt="illustration editor"
+              alt="editor"
               width={imageWidth}
               height={imageHeight}
               className='illustrator sm:max-w-[140%] lg:max-w-[160%]'
@@ -71,12 +74,12 @@ export default function Home() {
       {/* SECTION TWO */}
       <section className='main-two mt-[17rem] sm:mt-[6rem] flex flex-col sm:flex-row items-center'>
         <div className='image-container flex justify-center flex-1 -mt-[12rem] sm:mt-0'>
-          <Image 
-            src='/illustration-phones.svg'
+          <Image
+            src={'/illustration-phones.svg'}
             alt='phone'
             height={579}
             width={552}
-            className='img-phone'
+            className='illustrator'
           />
         </div>
 
@@ -89,24 +92,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION THREE NAMAN NEXT */}
-
+      {/* SECTION THREE */}
+      <section className="main-three mt-[5rem] flex flex-col sm:flex-row items-center">
+        <div className='image-container flex-1'>
+          <Image
+            src={imageSrcLaptop}
+            alt='laptop'
+            width={imageWidth}
+            height={imageHeight}
+            className='illustrator sm:max-w-[140%] lg:max-w-[160%] float-right'
+          />
+        </div>
+        <div className="text-container flex-1 px-[2rem] text-center sm:text-left lg:pr-[10rem] sm:pr-[5rem]">
+          <h2 className='text-[1.5rem] font-ubuntu-bold text-very-dark-blue pt-[2rem]'>Free, open, simple</h2>
+          <p className='text-[1.1rem] pt-[.8rem] text-very-dark-grayish-blue leading-[2rem]'>
+            Blogr is a free and open source application backed by a large community of helpful developers. It supports
+            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+          </p>
+          <h2 className='text-[1.5rem] font-ubuntu-bold text-very-dark-blue pt-[2rem]'>Powerful tooling</h2>
+          <p className='text-[1.1rem] pt-[.8rem] text-very-dark-grayish-blue leading-[2rem]'>
+            Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+            capable of producing even the most complicated sites.
+          </p>
+        </div>
+      </section>
       {/* <div className="main-two">
         
       </div>
 
       <div className="main-three">
-        <h2>Free, open, simple</h2>
-        <p>
-          Blogr is a free and open source application backed by a large community of helpful developers. It supports
-          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
-          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-        </p>
-        <h2>Powerful tooling</h2>
-        <p>
-          Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-          capable of producing even the most complicated sites.
-        </p>
+        
       </div> */}
       {/*
       Product
