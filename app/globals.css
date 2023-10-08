@@ -8,13 +8,6 @@ html{
     font-family: 'Ubuntu', sans-serif;
 }
 
-.nav {
-    /* background-image: url('../public/bg-pattern-intro-mobile.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
-}
-
 .arrow, .menu {
     transition: transform 0.3s ease;
 }
@@ -33,11 +26,18 @@ html{
 
 .nav-hero{
     background-image: url("../public/bg-pattern-intro-mobile.svg"), linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
-    background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
-
     border-bottom-left-radius: 100px;
+}
+
+.main-two {
+    background-image: url("../public/bg-pattern-circles.svg"), linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 17%, 21%));;
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    border-bottom-left-radius: 125px;
+    border-top-right-radius: 125px;
 }
 
 /* FOR MOBILE SCREENS */
@@ -60,5 +60,9 @@ html{
 
     .nav-hero{
         background-image: url("../public/bg-pattern-intro-desktop.svg"), linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    }
+
+    .main-two {
+        background-position: left bottom;
     }
 }
