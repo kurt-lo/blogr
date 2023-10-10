@@ -13,18 +13,6 @@ html {
     transition: transform 0.3s ease;
 }
 
-.links {
-    background-color: hsla(240, 3%, 79%, 0.24);
-}
-
-.links-text {
-    color: hsl(240, 1%, 38%);
-}
-
-.border-line {
-    border-color: hsla(240, 3%, 79%, 0.575);
-}
-
 .nav-hero {
     background-image: url("../public/bg-pattern-intro-mobile.svg"), linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     background-repeat: no-repeat;
@@ -52,6 +40,18 @@ html {
         height: max-content;
         background-color: hsl(0, 0%, 100%);
     }
+
+    .links {
+        background-color: hsla(240, 3%, 79%, 0.24);
+    }
+
+    .links-text {
+        color: hsl(240, 1%, 38%);
+    }
+
+    .border-line {
+        border-color: hsla(240, 3%, 79%, 0.575);
+    }
 }
 
 /* FOR LARGER SCREENS */
@@ -68,8 +68,8 @@ html {
         background-position: left bottom;
     }
 
-    .btn-custom:hover, .btn-start:hover {
+    .btn-custom:hover,
+    .btn-start:hover {
         background-color: rgba(255, 255, 255, 0.3);
     }
-
 }
