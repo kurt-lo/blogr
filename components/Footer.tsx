@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className='footer flex flex-col sm:flex-row justify-center items-center sm:items-start mt-[6rem] px-[5rem] pt-[5rem] pb-[5rem] bg-very-dark-black-blue rounded-tr-[100px]'>
       <div className="image-container">
         <Image
-          src='/logo.svg'
+          src='./logo.svg'
           alt='logo'
           width={101}
           height={40}
