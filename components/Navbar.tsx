@@ -23,7 +23,7 @@ const Navbar = () => {
 
             <div className='logo'>
                 <Image
-                    src='/logo.svg'
+                    src='./logo.svg'
                     alt='logo'
                     width={101}
                     height={40}
@@ -34,7 +34,7 @@ const Navbar = () => {
             {/* HAMBURGER MENU */}
             <div className={`sm:hidden relative`}>
                 <Image
-                    src={`${menuOpen ? '/icon-close.svg' : '/icon-hamburger.svg'}`}
+                    src={`${menuOpen ? './icon-close.svg' : './icon-hamburger.svg'}`}
                     width={`${menuOpen ? 26 : 32}`}
                     height={`${menuOpen ? 26 : 18}`}
                     alt={`${menuOpen ? 'hamburger' : 'close'}`}

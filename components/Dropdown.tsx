@@ -8,7 +8,7 @@ const Dropdown = ({ title, links }: DropdownProps) => {
 
     //FOR DROPDOWN
     const [dropDownOpen, setDropDownOpen] = useState(false);
-    const [dropDownImg, setDropDownImg] = useState('/icon-arrow-dark.svg')
+    const [dropDownImg, setDropDownImg] = useState('./icon-arrow-dark.svg')
 
     const changeColor = dropDownOpen && window.innerWidth <= 640 ? 'hsl(240, 1%, 38%)' : '';
 
@@ -19,9 +19,9 @@ const Dropdown = ({ title, links }: DropdownProps) => {
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 641) {
-                setDropDownImg('/icon-arrow-light.svg');
+                setDropDownImg('./icon-arrow-light.svg');
             } else {
-                setDropDownImg('/icon-arrow-dark.svg')
+                setDropDownImg('./icon-arrow-dark.svg')
             }
         }
 

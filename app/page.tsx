@@ -6,19 +6,19 @@ export default function Home() {
 
   const [imageWidth, setImageWidth] = useState(406);
   const [imageHeight, setImageHeight] = useState(331);
-  const [imageSrc, setImageSrc] = useState('/illustration-editor-mobile.svg');
-  const [imageSrcLaptop, setImageSrcLaptop] = useState('/illustration-laptop-mobile.svg');
+  const [imageSrc, setImageSrc] = useState('./illustration-editor-mobile.svg');
+  const [imageSrcLaptop, setImageSrcLaptop] = useState('./illustration-laptop-mobile.svg');
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 641) {
-        setImageSrc('/illustration-editor-desktop.svg');
-        setImageSrcLaptop('/illustration-laptop-desktop.svg');
+        setImageSrc('./illustration-editor-desktop.svg');
+        setImageSrcLaptop('./illustration-laptop-desktop.svg');
         setImageWidth(974);
         setImageHeight(786);
       } else {
-        setImageSrc('/illustration-editor-mobile.svg');
-        setImageSrcLaptop('/illustration-laptop-mobile.svg');
+        setImageSrc('./illustration-editor-mobile.svg');
+        setImageSrcLaptop('./illustration-laptop-mobile.svg');
         setImageWidth(406);
         setImageHeight(331);
       }
@@ -75,7 +75,7 @@ export default function Home() {
       <section className='main-two mt-[17rem] sm:mt-[6rem] flex flex-col sm:flex-row items-center'>
         <div className='image-container flex justify-center flex-1 -mt-[12rem] sm:mt-0'>
           <Image
-            src={'/illustration-phones.svg'}
+            src={'./illustration-phones.svg'}
             alt='phone'
             height={579}
             width={552}
